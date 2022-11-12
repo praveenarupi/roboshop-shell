@@ -50,7 +50,7 @@ SYSTEMD() {
 
 NODEJS() {
   echo Setting NodeJS repos
-  curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>${LOG}
+  curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash - &>>${LOG}
   StatusCheck
 
   echo Installing NodeJS
